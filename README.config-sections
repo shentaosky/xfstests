@@ -102,6 +102,9 @@ MKFS_OPTIONS="-q -F -b4096"
 FSTYP=ext4
 RESULT_BASE="`pwd`/results/`date +%d%m%y_%H%M%S`"
 
+[ext4_overlay]
+FSTYP=overlay
+
 [ext4_1k_block_size]
 MKFS_OPTIONS="-q -F -b1024"
 
@@ -111,6 +114,9 @@ MKFS_OPTIONS="-q -F -b4096 -O ^has_journal"
 [xfs_filesystem]
 MKFS_OPTIONS="-f"
 FSTYP=xfs
+
+[xfs_overlay]
+FSTYP=overlay
 
 [ext3_filesystem]
 FSTYP=ext3
